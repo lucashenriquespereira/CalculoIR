@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CalculandoIR.Services.Interfaces
+namespace CalculoIR.Screens.Interfaces
 {
-    public interface ITaxCalculator
+    public interface ICalculationScreen
     {
-        double TaxCalculation(double value );
+        public void MathStarts();
     }
 }

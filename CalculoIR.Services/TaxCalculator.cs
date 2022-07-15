@@ -1,20 +1,14 @@
-﻿using CalculandoIR.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CalculandoIR.Domain;
+using CalculandoIR.Services.Interfaces;
 
 namespace CalculandoIR.Services
 {
     public class TaxCalculator : ITaxCalculator
     {
-        public TaxCalculator()
+        public double TaxCalculation(double value)
         {
-        }
-        public double TaxCalculation(double value, double taxAliquot, double taxDeduction)
-        {
-            var finalValue = (value * taxAliquot) - taxDeduction;
+            var taxTable = TaxLines.TaxList.LastOrDefault(t => t.AnnualSalary <= value);
+            var finalValue = (value * taxTable.TaxAliquot) - taxTable.TaxDeduction;
 
             return finalValue;
         }

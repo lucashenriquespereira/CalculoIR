@@ -1,10 +1,4 @@
-﻿    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-
-    namespace CalculandoIR.Domain
+﻿    namespace CalculandoIR.Domain
     {
         public class TaxTable
         {
@@ -15,11 +9,4 @@
             {
             }
         }
-
     }
-
-    //    **Domain: camada responsável por conter:
-    //        Classes que são apenas para conter dados (POCOs/DTOs)
-    //        Enums
-    //        Extensões
-    //        Qualquer outro tipo de informação que seja comum a todas as camadas
